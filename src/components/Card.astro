@@ -1,0 +1,23 @@
+---
+import { withBase } from "../lib/base";
+
+interface Props {
+  title: string;
+  subtitle: string;
+  href: string;
+  image: string;
+}
+
+const { title, subtitle, href, image } = Astro.props;
+---
+
+<div class="card">
+  <div class="card-content">
+    <h3>{title}</h3>
+    <p>{subtitle}</p>
+    <a href={withBase(href)} class="card-button">Ver Productos</a>
+  </div>
+  <div class="card-image-wrapper">
+    <img class="card-image" src={withBase(image)} alt={title} />
+  </div>
+</div>

@@ -1,0 +1,69 @@
+---
+import Layout from "../layouts/Layout.astro";
+import FeatureSection from "../components/FeatureSection.astro";
+---
+
+<Layout title="Agaves — Destilados de Agave">
+  <div class="page-hero">
+    <h1>Destilados de Agave</h1>
+  </div>
+
+  <FeatureSection
+    id="el-comandante"
+    title="El Comandante"
+    products={[
+      { image: "/comandante-silver.png", alt: "El Comandante Silver" },
+      { image: "/comandante-gold.png", alt: "El Comandante Gold" },
+      { image: "/comandante-gold-gusano.png", alt: "El Comandante Gold con Gusano" },
+    ]}
+  />
+
+  <FeatureSection
+    id="dona-camila"
+    title="Doña Camila"
+    products={[
+      { image: "/camila-silver.png", alt: "Doña Camila Silver" },
+      { image: "/Camila-pink.png", alt: "Doña Camila Pink" },
+      { image: "/camila-gold.png", alt: "Doña Camila Gold" },
+      { image: "/camila-gold-gusano.png", alt: "Doña Camila Gold con Gusano" },
+      { image: "/camila-fire.png", alt: "Doña Camila Fire" },
+      { image: "/camila-chocolate.png", alt: "Doña Camila Dark Chocolate" },
+    ]}
+  />
+
+  <FeatureSection
+    id="diputado"
+    title="Diputado"
+    products={[
+      { image: "/diputado-silver.png", alt: "Diputado Silver" },
+      { image: "/diputado-gold.png", alt: "Diputado Gold" },
+      { image: "/diputado-gold-gusano.png", alt: "Diputado Gold con Gusano" },
+    ]}
+  />
+
+  <FeatureSection
+    id="frida-katrina"
+    title="Frida Katrina"
+    products={[
+      { image: "/Frida-Katrina.png", alt: "Frida Katrina Pink" },
+      { image: "/katrina-gold-gusano.png", alt: "Frida Katrina Gold con Gusano" },
+      { image: "/katrina-gold.png", alt: "Frida Katrina Gold" },
+      { image: "/katrina-lgbt.png", alt: "Frida Katrina LGBT" },
+      { image: "/katrina-silver.png", alt: "Frida Katrina Silver" },
+    ]}
+  />
+
+  <FeatureSection
+    title="Yerba Loca"
+    products={[{ image: "/Yerba-loca.png", alt: "Yerba Loca" }]}
+  />
+
+  <FeatureSection
+    id="espinazo-del-diablo"
+    title="El Espinazo del Diablo"
+    products={[
+      { image: "/espinazo.png", alt: "El Espinazo del Diablo Silver" },
+      { image: "/espinazo-gusano.png", alt: "Espinazo del Diablo con Gusano" },
+    ]}
+  />
+</Layout>

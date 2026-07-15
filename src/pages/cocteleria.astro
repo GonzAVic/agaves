@@ -1,0 +1,31 @@
+---
+import Layout from "../layouts/Layout.astro";
+import FeatureSection from "../components/FeatureSection.astro";
+import { withBase } from "../lib/base";
+---
+
+<Layout title="Agaves — Coctelería">
+  <div class="page-hero">
+    <h1>Coctelería</h1>
+  </div>
+
+  <FeatureSection
+    title="Coctelería"
+    products={[
+      { image: "/coco.png", alt: "Licor de Coco" },
+      { image: "/triple-sec.png", alt: "Licor Triple Sec" },
+      { image: "/curacao.png", alt: "Licor de Curacao" },
+      { image: "/cafe.png", alt: "Licor de Cafe" },
+      { image: "/cacao.png", alt: "Licor de Cacao" },
+      { image: "/menta.png", alt: "Licor de Menta" },
+      { image: "/amaretto.png", alt: "Licor de Amaretto" },
+    ]}
+  />
+
+  <section class="feature">
+    <h3>Conoce todos los sabores</h3>
+    <div class="feature-media">
+      <img src={withBase("/licores-cocteleria.jpg")} alt="Conoce todos los sabores" />
+    </div>
+  </section>
+</Layout>

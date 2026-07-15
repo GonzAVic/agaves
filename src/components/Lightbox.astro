@@ -1,0 +1,50 @@
+<div class="lightbox-overlay" id="lightbox">
+  <button type="button" class="lightbox-close" id="lightbox-close" aria-label="Cerrar">&times;</button>
+  <img class="lightbox-image" id="lightbox-image" src="" alt="" />
+</div>
+
+<script>
+  const overlay = document.getElementById("lightbox") as HTMLDivElement;
+  const image = document.getElementById("lightbox-image") as HTMLImageElement;
+  const closeButton = document.getElementById("lightbox-close") as HTMLButtonElement;
+
+  function openLightbox(src: string, alt: string) {
+    image.src = src;
+    image.alt = alt;
+    image.classList.remove("zoomed");
+    overlay.classList.add("is-open");
+    document.body.style.overflow = "hidden";
+  }
+
+  function closeLightbox() {
+    overlay.classList.remove("is-open");
+    image.classList.remove("zoomed");
+    document.body.style.overflow = "";
+  }
+
+  document.addEventListener("click", (event) => {
+    const target = event.target as HTMLElement;
+    const trigger = target.closest(".product-image-box img") as HTMLImageElement | null;
+    if (trigger) {
+      openLightbox(trigger.src, trigger.alt);
+    }
+  });
+
+  image.addEventListener("click", () => {
+    image.classList.toggle("zoomed");
+  });
+
+  closeButton.addEventListener("click", closeLightbox);
+
+  overlay.addEventListener("click", (event) => {
+    if (event.target === overlay) {
+      closeLightbox();
+    }
+  });
+
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape") {
+      closeLightbox();
+    }
+  });
+</script>

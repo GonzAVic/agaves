@@ -1,0 +1,23 @@
+---
+import ProductTile from "./ProductTile.astro";
+
+interface Product {
+  image: string;
+  alt: string;
+}
+
+interface Props {
+  title: string;
+  products: Product[];
+  id?: string;
+}
+
+const { title, products, id } = Astro.props;
+---
+
+<section class="feature" id={id}>
+  <h3>{title}</h3>
+  <div class="product-grid">
+    {products.map((product) => <ProductTile image={product.image} alt={product.alt} />)}
+  </div>
+</section>

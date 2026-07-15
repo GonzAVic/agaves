@@ -1,0 +1,33 @@
+---
+import Layout from "../layouts/Layout.astro";
+import { withBase } from "../lib/base";
+---
+
+<Layout title="Agaves — Contact">
+  <section class="contact-section">
+    <h3>Contacto</h3>
+    <div class="contact-grid">
+      <div class="contact-info">
+        <div>
+          <p class="contact-label">Teléfono</p>
+          <p class="contact-value">+52 999 357 7817</p>
+        </div>
+        <div>
+          <p class="contact-label">Correo electrónico</p>
+          <p class="contact-value">licoreraventas@hotmail.com</p>
+        </div>
+      </div>
+
+      <form class="contact-form">
+        <input type="text" name="name" placeholder="Name" />
+        <input type="email" name="email" placeholder="Email" />
+        <textarea name="message" placeholder="Message" rows="10"></textarea>
+        <button type="submit">Send</button>
+      </form>
+
+      <div class="contact-qr">
+        <img src={withBase("/qr-code.png")} alt="Contacto" />
+      </div>
+    </div>
+  </section>
+</Layout>

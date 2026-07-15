@@ -1,0 +1,17 @@
+---
+import { withBase } from "../lib/base";
+---
+
+<footer class="site-footer">
+  <img src={withBase("/logo.png")} alt="Agaves Del Caribe logo" class="footer-logo" />
+  <div class="footer-column">
+    <p class="footer-heading">Productos</p>
+    <a href={withBase("/destilados-agave")}>Destilados de Agave</a>
+    <a href={withBase("/cocteleria")}>Coctelería</a>
+    <a href={withBase("/vodka")}>Vodka</a>
+  </div>
+  <div class="footer-column">
+    <a href={withBase("/contact")}>Contacto</a>
+    <a href={withBase("/-/legal")}>Legal</a>
+  </div>
+</footer>

@@ -1,0 +1,21 @@
+---
+import { withBase } from "../lib/base";
+---
+
+<header class="site-header">
+  <a href={withBase("/")} class="logo">
+    <img src={withBase("/logo.png")} alt="Logo" height="36" />
+  </a>
+  <nav>
+    <div class="nav-dropdown" tabindex="0">
+      <span class="nav-item">Productos</span>
+      <div class="dropdown-menu">
+        <a href={withBase("/destilados-agave")}>Destilados de Agave</a>
+        <a href={withBase("/cocteleria")}>Coctelería</a>
+        <a href={withBase("/vodka")}>Vodka</a>
+      </div>
+    </div>
+    <a href={withBase("/contact")}>Contacto</a>
+    <a href={withBase("/-/legal")}>Legal</a>
+  </nav>
+</header>
