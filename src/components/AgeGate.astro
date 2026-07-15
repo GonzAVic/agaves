@@ -1,0 +1,28 @@
+<div class="age-gate-overlay" id="age-gate">
+  <div class="age-gate-modal">
+    <h3>Mayoría de edad</h3>
+    <p>
+      Al utilizar nuestro sitio web, el usuario declara ser mayor de edad de acuerdo con las leyes
+      vigentes en su lugar de residencia y tener la capacidad legal para adquirir y consumir productos
+      alcohólicos.
+    </p>
+    <button type="button" id="age-gate-accept">Aceptar</button>
+  </div>
+</div>
+
+<script>
+  const STORAGE_KEY = "agaves-age-verified";
+  const overlay = document.getElementById("age-gate") as HTMLDivElement;
+  const acceptButton = document.getElementById("age-gate-accept") as HTMLButtonElement;
+
+  if (!localStorage.getItem(STORAGE_KEY)) {
+    overlay.classList.add("is-open");
+    document.body.style.overflow = "hidden";
+  }
+
+  acceptButton.addEventListener("click", () => {
+    localStorage.setItem(STORAGE_KEY, "true");
+    overlay.classList.remove("is-open");
+    document.body.style.overflow = "";
+  });
+</script>

@@ -2,6 +2,7 @@
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 import Lightbox from "../components/Lightbox.astro";
+import AgeGate from "../components/AgeGate.astro";
 import { withBase } from "../lib/base";
 import "../styles/global.css";
 
@@ -27,6 +28,7 @@ const { title } = Astro.props;
     <title>{title}</title>
   </head>
   <body>
+    <AgeGate />
     <Header />
     <slot />
     <Footer />
